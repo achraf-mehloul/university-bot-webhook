@@ -16,4 +16,4 @@ ENV/
 Thumbs.db
 *.log
 logs/
-render.yaml
+config.local.py
