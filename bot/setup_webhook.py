@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Script to setup webhook after deployment"""
 import asyncio
 import os
 from telegram import Bot
