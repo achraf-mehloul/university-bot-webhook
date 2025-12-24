@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: university-bot
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: |
+      chmod +x start.sh
+      ./start.sh
+    envVars:
+      - key: BOT_TOKEN
+        value: 7194132273:AAFFf4Q9J4YJFKPm0poQ1DEjKn4WJYSNgec
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: DEBUG
+        value: false
+      - key: SECRET_KEY
+        value: c38579525d722b32f6c20d4dd09a744ab8bcd81061f6d58c9ff6d4fdd7dab210
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /health
+    autoDeploy: true
